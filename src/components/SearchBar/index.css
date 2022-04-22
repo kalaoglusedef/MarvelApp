@@ -1,0 +1,65 @@
+.searchContainer {
+  max-width: 1208px;
+  position: relative;
+}
+.searchContainer > p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: white;
+  margin: 0px;
+  margin-bottom: 23px;
+}
+.searchContainer > input {
+  width: 609px;
+  height: 63px;
+  border: 1px solid #f4f4f4;
+  padding-left: 26px;
+  background-color: transparent;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: white;
+  line-height: 21px;
+}
+.searchContainer > ul {
+  position: absolute;
+  margin: 0px;
+  width: 100%;
+  background-color: #434343;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 0px;
+  gap: 16px;
+}
+.searchContainer > ul > li {
+  cursor: pointer;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 15px;
+  color: white;
+}
+.searchContainer > ul > li > a {
+  color: white;
+  text-decoration: none;
+}
+.searchContainer > ul > li:last-child {
+  margin-bottom: 18px;
+}
+
+.searchContainer > ul > li:hover {
+  background-color: #7e7e7e;
+}

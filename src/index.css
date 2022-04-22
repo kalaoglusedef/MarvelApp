@@ -1,23 +1,29 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 
 body {
   background-color: #222222;
   margin: 0;
 }
-
+.searchlocalContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1208px;
+  margin: 0 auto 0;
+  align-items: flex-end;
+}
 header {
   width: auto;
   background-image: url("./img/bg.svg");
@@ -45,8 +51,9 @@ header > .logo {
   margin: 254px auto 0;
 }
 
-.cardContainer > div {
+.cardContainer > a {
   width: 25%;
+  text-decoration: none;
   display: flex;
   justify-content: center;
 }
@@ -81,8 +88,7 @@ header > .logo {
   text-shadow: 1px 1px 2px orangered, 0 0 25px lightpink, 0 0 5px lightsteelblue;
 }
 
-
-.loadingContainer{
+.loadingContainer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,7 +126,7 @@ header > .logo {
   height: 72px;
   display: flex;
   align-items: center;
-    cursor: pointer;
+  cursor: pointer;
   justify-content: center;
 }
 .paginationContainer > .pagination > .selected {
@@ -129,7 +135,87 @@ header > .logo {
   font-weight: 500px;
   background-color: #7e7e7e;
   border-radius: 30px;
+}
 
+.detailContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1208px;
+  margin: auto;
+}
+
+.detailContainer > button {
+  background-color: #222;
+  border: 1px solid #f00;
+  border-radius: 5px;
+  color: #fff;
+  width: 130px;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 90px;
+}
+
+.detailContainer > button:hover {
+  cursor: pointer;
+  background-color: #787676;
+  transition: all 0.3s;
+  transition-timing-function: ease-in;
+}
+
+.detailContainer > .heroDetail {
+  display: flex;
+  flex-direction: row;
+  margin-top: 90px;
+  justify-content: space-between;
+}
+
+.detailContainer > .heroDetail > img {
+  border-radius: 20px;
+  height: 30%;
+  width: 40%;
+}
+
+.detailContainer > .heroDetail > img:hover {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.05);
+}
+
+.detailContainer > .heroDetail > .hero {
+  display: flex;
+  flex-direction: column;
+  width: 36%;
+  justify-content: flex-start;
+}
+.detailContainer > .heroDetail > .hero .tittle {
+  margin: 0px;
+  font-size: 45px;
+  color: #f00;
+}
+.detailContainer > .heroDetail > .hero .tittleRomans {
+  font-size: 30px;
+  color: #f00;
+}
+.detailContainer > .heroDetail > .hero p {
+  color: white;
+}
+
+.detailContainer > .heroDetail > .hero > a {
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+  width: 30%;
+  padding: 10px;
+  border: 1px dashed #f00;
+  border-radius: 10px;
+  color: white;
+}
+
+.detailContainer > .heroDetail > .hero > a:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.03);
+  color: #f00;
+  font-weight: bold;
 }
 
 /*tablet görünüm*/
@@ -140,6 +226,27 @@ header > .logo {
     height: 528px;
     background-position: top;
   }
+
+  .searchlocalContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .searchlocalContainer > .searchContainer > p {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .searchlocalContainer > .localizationContainer {
+    margin-top: 16px;
+  }
+
+  .searchlocalContainer > .localizationContainer > button {
+    width: 50px;
+    height: 45px;
+  }
+
   header > .logo {
     top: 352px;
     width: 300px;
@@ -149,7 +256,7 @@ header > .logo {
     flex-wrap: wrap;
   }
 
-  .cardContainer > div {
+  .cardContainer > a {
     width: 33%;
     display: flex;
     justify-content: center;
@@ -157,6 +264,23 @@ header > .logo {
 
   .card {
     width: calc(100% - 48px);
+  }
+
+  .detailContainer > .heroDetail > .hero {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .detailContainer > .heroDetail > .hero p {
+    font-size: 14px;
+  }
+
+  .detailContainer > .heroDetail > .hero .tittle {
+    font-size: 22px;
+  }
+  .detailContainer > .heroDetail > .hero .tittleRomans {
+    font-size: 18px;
   }
 
   .paginationContainer {
@@ -183,25 +307,65 @@ header > .logo {
     top: 250px;
     width: 168px;
   }
+
+  .searchlocalContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .searchlocalContainer > .searchContainer > p {
+    margin-top: 30px;
+    text-align: center;
+  }
+  .searchlocalContainer > .searchContainer > input {
+    width: 276px;
+    margin: 0px;
+  }
+  .searchlocalContainer > .localizationContainer {
+    margin-top: 16px;
+  }
+
+  .searchlocalContainer > .localizationContainer > button {
+    width: 45px;
+    height: 40px;
+  }
+
   .cardContainer {
     margin-top: 150px;
   }
 
-  .cardContainer > div {
+  .cardContainer > a {
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
-  .cardContainer > div:last-child > .card{
+  .cardContainer > div:last-child > .card {
     margin-bottom: 8px;
   }
   .card {
     width: 100%;
     margin-left: 24px;
     margin-right: 24px;
+  }
 
+  .detailContainer > .heroDetail > .hero {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 5px;
+  }
 
+  .detailContainer > .heroDetail > .hero p {
+    font-size: 14px;
+  }
+
+  .detailContainer > .heroDetail > .hero .tittle {
+    font-size: 22px;
+  }
+  .detailContainer > .heroDetail > .hero .tittleRomans {
+    font-size: 18px;
   }
 
   .paginationContainer {
@@ -217,7 +381,6 @@ header > .logo {
     align-items: center;
   }
 
-  .paginationContainer > .pagination > a,
   .paginationContainer > .pagination > img {
     margin-right: 14px;
     width: 32px;

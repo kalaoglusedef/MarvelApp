@@ -1,0 +1,19 @@
+.localizationContainer > button {
+  width: 64px;
+  height: 63px;
+  margin-right: 15px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  background-color: #7e7e7e;
+}
+
+.localizationContainer > .selected {
+  background-color: #ededed;
+}
+
+.localizationContainer > button:last-child {
+  margin-right: 0px;
+}
